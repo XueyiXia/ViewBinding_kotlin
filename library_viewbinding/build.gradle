@@ -39,7 +39,7 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.XueyiXia'
-                artifactId = 'ViewBinding'
+                artifactId = 'ViewBinding_kotlin'
                 version = '1.0'
             }
         }

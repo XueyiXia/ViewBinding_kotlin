@@ -17,11 +17,7 @@ import java.lang.reflect.ParameterizedType
 abstract class BaseFragment<T : ViewBinding> : Fragment() {
     open lateinit var mViewBinding: T
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val superclass = javaClass.genericSuperclass
         if (superclass != null) {
             val aClass = (superclass as ParameterizedType).actualTypeArguments[0] as Class<*>
@@ -48,5 +44,5 @@ abstract class BaseFragment<T : ViewBinding> : Fragment() {
     /**
      * 入口函数
      */
-    abstract fun initView(rootView: View?, savedInstanceState: Bundle?)
+    abstract fun initView(rootView: View, savedInstanceState: Bundle?)
 }

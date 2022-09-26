@@ -13,6 +13,7 @@ import java.lang.reflect.ParameterizedType
  * @说明:
  */
 abstract class BaseActivity<T : ViewBinding> : AppCompatActivity() {
+
     open lateinit var mViewBinding: T
 
     override fun onCreate(savedInstanceState: Bundle?) {

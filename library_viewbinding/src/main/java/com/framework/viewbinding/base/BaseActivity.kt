@@ -1,5 +1,7 @@
 package com.framework.viewbinding.base
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -31,6 +33,50 @@ abstract class BaseActivity<T : ViewBinding> : AppCompatActivity() {
         }
         initView(window.decorView, savedInstanceState)
     }
+
+
+    /**
+     * activity跳转（无参数）
+     * @param className
+     */
+    open fun startActivity(className: Class<out Activity>) {
+        val intent = Intent(this, className)
+        startActivity(intent)
+    }
+
+    /**
+     * activity跳转（有参数）
+     * @param className
+     */
+    open fun startActivity(className: Class<out Activity>, bundle: Bundle) {
+        val intent = Intent(this, className)
+        intent.putExtras(bundle)
+        startActivity(intent)
+    }
+
+    /**
+     * activity结果跳转（没有参数）
+     * @param className
+     * @param requestCode
+     */
+    open fun startActivityForResult(className: Class<out Activity>, requestCode: Int) {
+        val intent = Intent(this, className)
+        startActivityForResult(intent, requestCode)
+    }
+
+
+    /**
+     * activity结果跳转（有参数）
+     * @param className
+     * @param bundle
+     * @param requestCode
+     */
+    open fun startActivityForResult(className: Class<out Activity>, bundle: Bundle, requestCode: Int) {
+        val intent = Intent(this, className)
+        intent.putExtras(bundle)
+        startActivityForResult(intent, requestCode)
+    }
+
 
     /**
      * 入口函数

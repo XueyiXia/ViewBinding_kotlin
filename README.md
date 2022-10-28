@@ -43,5 +43,10 @@ step3.
 以上就是viewbinding 的使用，这个最基础的版本，在项目中，可以改造基类，搭配mvp 或者MVVM 开发架构使用
 
 
+在项目中使用：
+build.gradle 增加implementation 'com.github.XueyiXia:ViewBinding_kotlin:1.0.1'
+ 
+![image](https://user-images.githubusercontent.com/25949241/198540162-e90092d7-07fa-4b7c-8dc2-d53de098459d.png)
+
 
 

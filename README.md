@@ -44,7 +44,7 @@ step3.
 
 
 在项目中使用：
-build.gradle 增加implementation 'com.github.XueyiXia:ViewBinding_kotlin:1.0.1'
+build.gradle 增加    implementation 'com.github.XueyiXia:ViewBinding_kotlin:v1.0.1'
  
 ![image](https://user-images.githubusercontent.com/25949241/198540162-e90092d7-07fa-4b7c-8dc2-d53de098459d.png)
 
